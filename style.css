@@ -20,7 +20,7 @@ body {
     background: white;
     border: 1px solid #d0d7de;
     border-radius: 12px;
-    height: 320px;
+    height: 360px;
     margin: 16px;
     padding: 24px;
     width: 380px;
@@ -358,4 +358,327 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-color: #fff8c5;
     color: #7d4e00;
     border: 1px solid #bf8700;
+}
+
+.visibility-badge-internal {
+    background-color: #fff5b1;
+    color: #7d4e00;
+    border: 1px solid #d4a72c;
+}
+
+.visibility-badge-archived {
+    background-color: #f0f0f0;
+    color: #57606a;
+    border: 1px solid #8c959f;
+}
+
+.visibility-badge-fork {
+    background-color: #ddf4ff;
+    color: #0969da;
+    border: 1px solid #54aeff;
+}
+
+/* Detail page styles */
+#detailContainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#actionDetail {
+    background: white;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.detail-header {
+    border-bottom: 2px solid #d0d7de;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.detail-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #24292f;
+    font-weight: 700;
+}
+
+.detail-section {
+    margin-bottom: 32px;
+}
+
+.detail-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+    color: #24292f;
+    font-weight: 600;
+}
+
+.detail-section p {
+    margin: 0;
+    color: #57606a;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.detail-loading,
+.detail-error {
+    text-align: center;
+    padding: 48px 24px;
+    color: #57606a;
+    font-size: 1.1rem;
+}
+
+.detail-error {
+    color: #cf222e;
+}
+
+.detail-error a {
+    color: #0969da;
+    text-decoration: underline;
+}
+
+.panel-actions {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #d0d7de;
+}
+
+.panel-actions a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0969da;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.panel-actions a:hover {
+    background-color: #0550ae;
+    text-decoration: none;
+}
+
+.filters {
+    clear: both;
+    margin-bottom: 24px;
+    padding: 20px 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    border: 1px solid #d0d7de;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.filter-group:last-of-type {
+    margin-bottom: 16px;
+}
+
+.filter-label {
+    font-weight: 600;
+    color: #57606a;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 8px;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: #f6f8fa;
+    color: #24292f;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background-color: #e7edf3;
+    border-color: #0969da;
+}
+
+.filter-btn.active {
+    background-color: #0969da;
+    color: white;
+    border-color: #0969da;
+}
+
+.filter-btn .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.filter-btn.active .count {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.filter-btn-clear {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #cf222e;
+    border: 1px solid #cf222e;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn-clear:hover {
+    background-color: #cf222e;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .filters {
+        padding: 16px;
+    }
+    
+    .filter-group {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+    
+    .filter-label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    
+    .filter-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .filter-btn-clear {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+/* README section styles */
+.readme-section {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 2px solid #d0d7de;
+}
+
+.readme-content {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 16px;
+    overflow-x: auto;
+    line-height: 1.6;
+    color: #24292f;
+}
+
+.readme-content h1 {
+    font-size: 1.8rem;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d0d7de;
+    color: #24292f;
+}
+
+.readme-content h2 {
+    font-size: 1.5rem;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d0d7de;
+    color: #24292f;
+}
+
+.readme-content h3 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #24292f;
+}
+
+.readme-content p {
+    margin: 12px 0;
+    color: #57606a;
+}
+
+.readme-content a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+.readme-content a:hover {
+    text-decoration: underline;
+}
+
+.readme-content code {
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.9em;
+    color: #24292f;
+}
+
+.readme-content pre {
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+.readme-content pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: block;
+}
+
+.readme-content strong {
+    font-weight: 600;
+    color: #24292f;
+}
+
+.readme-content em {
+    font-style: italic;
+}
+
+.readme-error {
+    color: #cf222e;
+    font-style: italic;
 }
